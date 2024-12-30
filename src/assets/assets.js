@@ -5,8 +5,40 @@ import send from "./send.svg";
 import work2 from "./profile1.jpg";
 import laptop from "./laptop.png";
 import web from "./web-design.png";
-import responsive from "./smartphone-call.png"
-import resume from "./SayyidMarvanVT_Resume.pdf"
+import Html from "./skills/html.svg";
+import Css from "./skills/css.svg";
+import Js from "./skills/javascript.svg";
+import Ts from "./skills/typescript.svg";
+import Rect from "./skills/react.svg";
+import Next from "./skills/next-js.svg";
+import Scompo from "./skills/styled-components.svg";
+import Tailwind from "./skills/tailwindcss.svg";
+import Mui from "./skills/material-ui.svg";
+import git from "./skills/git.svg";
+import img2 from "./img2.jpg";
+import responsive from "./smartphone-call.png";
+import resume from "./mostafa-akajdid-cv.pdf";
 
+export {
+  hand,
+  files,
+  send,
+  scroll,
+  work2,
+  laptop,
+  web,
+  responsive,
+  resume,
+  img2,
+  Html,
+  Css,
+  Js,
+  Ts,
+  Rect,
+  Next,
+  Scompo,
+  Tailwind,
+  Mui,
+  git,
 
-export { hand, files, send, scroll, work2, laptop, web, responsive,resume };
+};

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import "./work.css";
 import Projects from "./Projects";
@@ -150,7 +151,7 @@ const Work = () => {
       <h2 className="section__title">Work</h2>
       <span className="section__subtitle">Most recent works</span>
 
-      <div className="work__filters container grid">
+      <div className="work__filters container grid ">
         <button
           className={`work__item ${
             selectedCategory === "All" ? "active-work" : ""

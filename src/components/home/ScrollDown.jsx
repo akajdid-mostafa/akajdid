@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { scroll } from '../../assets/assets'
 
 const ScrollDown = () => {

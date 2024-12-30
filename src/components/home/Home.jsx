@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./home.css";
 import Social from "./Social";
 import Data from "./Data";

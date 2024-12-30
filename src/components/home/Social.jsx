@@ -1,10 +1,8 @@
-import React from "react";
-
 const Social = () => {
   return (
     <div className="home__social">
       <a
-        href="https://www.instagram.com/_marvan.__"
+        href="https://www.instagram.com/mostafaakajdidm/"
         target="_blank"
         rel="noopener noreferrer"
         className="home__social-icon"
@@ -13,7 +11,7 @@ const Social = () => {
         <span className="home__social-tooltip">Instagram</span>
       </a>
       <a
-        href="https://www.linkedin.com/in/sayyid-marvan"
+        href="https://www.linkedin.com/in/mostafa-akajdid-774735232/"
         target="_blank"
         rel="noopener noreferrer"
         className="home__social-icon"
@@ -22,7 +20,7 @@ const Social = () => {
         <span className="home__social-tooltip">LinkedIn</span>
       </a>
       <a
-        href="https://github.com/sayyidmarvanvt"
+        href="https://github.com/akajdid-mostafa"
         target="_blank"
         rel="noopener noreferrer"
         className="home__social-icon"
@@ -31,7 +29,7 @@ const Social = () => {
         <span className="home__social-tooltip">GitHub</span>
       </a>
       <a
-        href="tel:+9567080872"
+        href="tel:+212762544011"
         rel="noopener noreferrer"
         className="home__social-icon"
         target="_blank"

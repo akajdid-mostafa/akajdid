@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Sun from "./Sun.svg";
 import Moon from "./Moon.svg";
@@ -22,7 +23,7 @@ const DarkMode = () => {
         id="darkmode-toggle"
         onChange={toggleTheme}
       />
-      <label className="dark_mode_label" for="darkmode-toggle">
+      <label className="dark_mode_label" htmlFor="darkmode-toggle">
         <img src={Sun} alt="" className="sun"/>
         <img src={Moon} alt="" className="moon"/>
       </label>

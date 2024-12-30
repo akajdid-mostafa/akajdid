@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./footer.css";
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
         </ul>
         <div className="footer__social">
           <a
-            href="https://www.instagram.com/_marvan.__"
+            href="https://www.instagram.com/mostafaakajdidm/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__social-link"
@@ -33,7 +34,7 @@ const Footer = () => {
             <i className="bx bxl-instagram"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/sayyid-marvan"
+            href="https://www.linkedin.com/in/mostafa-akajdid-774735232/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__social-link"
@@ -41,7 +42,7 @@ const Footer = () => {
             <i className="bx bxl-linkedin"></i>
           </a>
           <a
-            href="https://github.com/sayyidmarvanvt"
+            href="https://github.com/akajdid-mostafa"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__social-link"
@@ -50,7 +51,7 @@ const Footer = () => {
           </a>
         </div>
         <span className="footer__copy">
-          &#169; SayyidMarvan. All rigths reserved
+          &#169; MostafaAkajdid. All rigths reserved
         </span>
       </div>
     </footer>

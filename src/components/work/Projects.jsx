@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 import "./work.css";
+import PropTypes from 'prop-types';
 
 const Projects = ({ projects }) => {
+  Projects.propTypes = {
+    projects: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        stacks: PropTypes.arrayOf(PropTypes.string).isRequired,
+        github: PropTypes.string.isRequired
+      })
+    ).isRequired
+  };
+
   return (
     <div className="work__container container grid">
-      {projects.map((project, index) => (
-        <div className="project__card" key={index}>
+      {projects.map((project) => (
+        <div className="project__card" key={project.name}>
           <a
             href={project.link}
             target="_blank"
@@ -25,14 +40,16 @@ const Projects = ({ projects }) => {
 
             <ul className="tags">
               {project.stacks.map((stack, i) => (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project__link"
-                >
-                  <li key={i}>{stack}</li>
-                </a>
+                <li key={i}>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project__link"
+                  >
+                    {stack}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
