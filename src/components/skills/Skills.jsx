@@ -18,7 +18,7 @@ const Skills = () => {
       </div>
       <div className="skills__container2  grid">
         {/* <Skil/> */}
-        {/* <Tech /> */}
+        <Tech />
       </div>
     </section>
   );
