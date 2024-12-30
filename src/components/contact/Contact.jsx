@@ -1,40 +1,96 @@
-import React, { useRef } from "react";
+import  { useState } from "react";
 import { send } from "../../assets/assets";
 import "./contact.css";
-import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
-  const form = useRef();
-  console.log();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [ setShowToast] = useState(false);
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_phie3fe", "template_sb6saio", form.current, {
-        publicKey: "Okzs0fYLFRZT9SGrb",
-      })
-      .then(
-        () => {
-          console.log(e.target.name.value);
+    setTimeout(() => {
+      setShowToast(true);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
 
-          emailjs.send(
-            "service_phie3fe",
-            "template_xiwojho",
-            {
-              name: e.target.name.value,
-              email: e.target.email.value,
-            },
-            "Okzs0fYLFRZT9SGrb"
-          );
-          e.target.reset();
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      
+      setTimeout(() => {
+        setShowToast(false);
+      }, 3000); 
+    }, 1000); 
+  
+    const emailSent = await sendEmail(formData);
+    if (emailSent) {
+      console.log("Email sent successfully!");
+    }
   };
+
+  const sendEmail = async (data) => {
+    try {
+      const response = await fetch("https://email-lemon-pi.vercel.app/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      return response.ok;
+    } catch (error) {
+      console.error("Error:", error);
+      return false;
+    }
+  };
+
+
+  // const form = useRef();
+  // console.log();
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm("service_phie3fe", "template_sb6saio", form.current, {
+  //       publicKey: "Okzs0fYLFRZT9SGrb",
+  //     })
+  //     .then(
+  //       () => {
+  //         console.log(e.target.name.value);
+
+  //         emailjs.send(
+  //           "service_phie3fe",
+  //           "template_xiwojho",
+  //           {
+  //             name: e.target.name.value,
+  //             email: e.target.email.value,
+  //           },
+  //           "Okzs0fYLFRZT9SGrb"
+  //         );
+  //         e.target.reset();
+  //         console.log("SUCCESS!");
+  //       },
+  //       (error) => {
+  //         console.log("FAILED...", error.text);
+  //       }
+  //     );
+  // };
 
   return (
     <section className="contact section" id="contact">
@@ -81,10 +137,12 @@ const Contact = () => {
         </div>
 
         <div className="contact__content">
-          <form ref={form} onSubmit={sendEmail} className="contact__form">
+          <form  onSubmit={handleSubmit} className="contact__form">
             <div className="contact__form-div">
               <input
                 type="text"
+                value={formData.name}
+                onChange={handleChange}
                 name="name"
                 className="contact__form-input"
                 placeholder="Your name"
@@ -94,6 +152,8 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="contact__form-input"
                 placeholder="Your email"
               />
@@ -103,11 +163,15 @@ const Contact = () => {
                 name="message"
                 cols="30"
                 rows="10"
+                value={formData.message}
+                onChange={handleChange}
                 className="contact__form-input"
                 placeholder="Type the message here"
               />
             </div>
-            <button href="" className="button button--flex">
+            <button href="" 
+            type="submit"
+            className="button button--flex">
               Send
               <img src={send} alt="send icon" className="button__icon" />
             </button>
