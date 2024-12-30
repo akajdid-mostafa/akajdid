@@ -24,7 +24,7 @@ const Tech = () => {
   const frontendSkills6 = [
     
     {
-      name: "CSS",
+      name: "sddd",
       icon: "bx bxl-css3 skills_icon",
     },
     {
