@@ -36,16 +36,16 @@ const projects = [
     image: foodeli,
     category: "Fullstack",
   },
-  // {
-  //   name: "EventPlanner360",
-  //   description:
-  //     "EventPlanner360 is a full-stack web application designed to help users plan and manage events efficiently. It allows users to create, update, and manage events, guests, and schedules, providing a seamless experience for event planning.",
-  //   stacks: ["React", "Node.js", "Express.js", "MongoDB", "Nodemailer", "JWT"],
-  //   link: "https://eventplanner-frontend-sdjb.onrender.com/",
-  //   github: "https://github.com/sayyidmarvanvt/CBT-CIP",
-  //   image: "path_to_image",
-  //   category: "Fullstack",
-  // },
+  {
+    name: "EventPlanner360",
+    description:
+      "EventPlanner360 is a full-stack web application designed to help users plan and manage events efficiently. It allows users to create, update, and manage events, guests, and schedules, providing a seamless experience for event planning.",
+    stacks: ["React", "Node.js", "Express.js", "MongoDB", "Nodemailer", "JWT"],
+    link: "https://eventplanner-frontend-sdjb.onrender.com/",
+    github: "https://github.com/sayyidmarvanvt/CBT-CIP",
+    image: "path_to_image",
+    category: "Fullstack",
+  },
   {
     name: "Exedo Estate",
     description:
@@ -56,16 +56,16 @@ const projects = [
     image: exedoestate,
     category: "Fullstack",
   },
-  // {
-  //   name: "Mentorow Technology Website",
-  //   description:
-  //     "Developed a dynamic website using Node.js, Express.js, and React.js. Designed and animated engaging UI components using Framer Motion, reducing bounce rate by 20%.",
-  //   stacks: ["Node.js", "Express.js", "Tailwind CSS", "Framer Motion", "React.js", "MongoDB", "Context API"],
-  //   link: "https://footer-mu.vercel.app/",
-  //   github: "https://github.com/sayyidmarvanvt/Footer",
-  //   image: "path_to_image",
-  //   category: "Fullstack",
-  // },
+  {
+    name: "Mentorow Technology Website",
+    description:
+      "Developed a dynamic website using Node.js, Express.js, and React.js. Designed and animated engaging UI components using Framer Motion, reducing bounce rate by 20%.",
+    stacks: ["Node.js", "Express.js", "Tailwind CSS", "Framer Motion", "React.js", "MongoDB", "Context API"],
+    link: "https://footer-mu.vercel.app/",
+    github: "https://github.com/sayyidmarvanvt/Footer",
+    image: "path_to_image",
+    category: "Fullstack",
+  },
   {
     name: "SmartHost",
     description:
@@ -139,46 +139,12 @@ const projects = [
 ];
 
 const Work = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
 
   return (
     <section className="work section" id="work">
       <h2 className="section__title">Work</h2>
       <span className="section__subtitle">Most recent works</span>
-
-      <div className="work__filters container grid ">
-        <button
-          className={`work__item ${
-            selectedCategory === "All" ? "active-work" : ""
-          }`}
-          onClick={() => setSelectedCategory("All")}
-        >
-          ALL
-        </button>
-        <button
-          className={`work__item ${
-            selectedCategory === "Fullstack" ? "active-work" : ""
-          }`}
-          onClick={() => setSelectedCategory("Fullstack")}
-        >
-          FULLSTACK
-        </button>
-        <button
-          className={`work__item ${
-            selectedCategory === "React" ? "active-work" : ""
-          }`}
-          onClick={() => setSelectedCategory("React")}
-        >
-          REACT
-        </button>
-      </div>
-
-      <Projects projects={filteredProjects} />
+      <Projects projects={projects} />
     </section>
   );
 };

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ServiceItem = ({ title, description, icon }) => {
   return (
     <div className="services__content">

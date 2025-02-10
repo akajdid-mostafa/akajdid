@@ -1,7 +1,6 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { send } from "../../assets/assets";
 import "./contact.css";
-
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +8,14 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [ setShowToast] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
+  const [errors, setErrors] = useState({}); // State to handle validation errors
+  const [isFocused, setIsFocused] = useState({
+    name: false,
+    email: false,
+    message: false,
+  }); // State to track focus and input
+  const [isLoading, setIsLoading] = useState(false); // State to handle loading
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,41 +23,68 @@ const Contact = () => {
       ...prevData,
       [name]: value,
     }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "", // Clear the error for this field
+    }));
   };
 
+  const handleFocus = (e) => {
+    const { name } = e.target;
+    setIsFocused((prev) => ({ ...prev, [name]: true }));
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    setIsFocused((prev) => ({ ...prev, [name]: value.trim() !== "" }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email address is invalid";
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setTimeout(() => {
-      setShowToast(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+    if (!validateForm()) return;
 
-      
-      setTimeout(() => {
-        setShowToast(false);
-      }, 3000); 
-    }, 1000); 
-  
+    setIsLoading(true); // Show loading state
     const emailSent = await sendEmail(formData);
+    setIsLoading(false); // Hide loading state
+
     if (emailSent) {
-      console.log("Email sent successfully!");
+      setShowPopup(true);
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("Failed to send message. Please try again.");
     }
   };
 
   const sendEmail = async (data) => {
     try {
-      const response = await fetch("https://email-lemon-pi.vercel.app/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://email-lemon-pi.vercel.app/api/sendEmail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       return response.ok;
     } catch (error) {
       console.error("Error:", error);
@@ -59,38 +92,9 @@ const Contact = () => {
     }
   };
 
-
-  // const form = useRef();
-  // console.log();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm("service_phie3fe", "template_sb6saio", form.current, {
-  //       publicKey: "Okzs0fYLFRZT9SGrb",
-  //     })
-  //     .then(
-  //       () => {
-  //         console.log(e.target.name.value);
-
-  //         emailjs.send(
-  //           "service_phie3fe",
-  //           "template_xiwojho",
-  //           {
-  //             name: e.target.name.value,
-  //             email: e.target.email.value,
-  //           },
-  //           "Okzs0fYLFRZT9SGrb"
-  //         );
-  //         e.target.reset();
-  //         console.log("SUCCESS!");
-  //       },
-  //       (error) => {
-  //         console.log("FAILED...", error.text);
-  //       }
-  //     );
-  // };
+  const closePopup = () => {
+    setShowPopup(false); // Close the popup
+  };
 
   return (
     <section className="contact section" id="contact">
@@ -122,7 +126,6 @@ const Contact = () => {
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">+2127 62544011</span>
             </a>
-
             <a
               href="tel:+212762544011"
               className="contact__card"
@@ -137,16 +140,22 @@ const Contact = () => {
         </div>
 
         <div className="contact__content">
-          <form  onSubmit={handleSubmit} className="contact__form">
+          <form onSubmit={handleSubmit} className="contact__form">
             <div className="contact__form-div">
               <input
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 name="name"
-                className="contact__form-input"
+                className={`contact__form-input ${
+                  isFocused.name ? "has-text" : ""
+                }`}
                 placeholder="Your name"
+                required
               />
+              {errors.name && <span className="error">{errors.name}</span>}
             </div>
             <div className="contact__form-div">
               <input
@@ -154,9 +163,15 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="contact__form-input"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                className={`contact__form-input ${
+                  isFocused.email ? "has-text" : ""
+                }`}
                 placeholder="Your email"
+                required
               />
+              {errors.email && <span className="error">{errors.email}</span>}
             </div>
             <div className="contact__form-div contact__form-area">
               <textarea
@@ -165,19 +180,46 @@ const Contact = () => {
                 rows="10"
                 value={formData.message}
                 onChange={handleChange}
-                className="contact__form-input"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                className={`contact__form-input ${
+                  isFocused.message ? "has-text" : ""
+                }`}
                 placeholder="Type the message here"
+                required
               />
+              {errors.message && (
+                <span className="error">{errors.message}</span>
+              )}
             </div>
-            <button href="" 
-            type="submit"
-            className="button button--flex">
-              Send
-              <img src={send} alt="send icon" className="button__icon" />
+            <button
+              type="submit"
+              className="button button--flex"
+              disabled={isLoading}
+            >
+              {isLoading ? "Sending..." : "Send"}
+              {!isLoading && (
+                <img src={send} alt="send icon" className="button__icon" />
+              )}
             </button>
           </form>
         </div>
       </div>
+
+      {/* Popup Modal */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <p>
+              Thank you for contacting us, I will respond to your message as
+              soon as possible.
+            </p>
+            <button onClick={closePopup} className="popup-ok-button">
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
