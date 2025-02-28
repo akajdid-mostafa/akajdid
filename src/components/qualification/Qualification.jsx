@@ -135,7 +135,7 @@ const Qualification = () => {
                   OCEAN CONNECTING - On site
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> Jul 2024 – Present
+                  <i className="uil uil-calendar-alt"></i> Jul 2024 – Feb 2024
                 </div>
               </div>
               <div>

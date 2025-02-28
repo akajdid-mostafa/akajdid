@@ -1,7 +1,7 @@
 import "./skills.css";
 import Frontend from "./Frontend";
 import Backend from "./Backend";
-import Techno from "./Techno";
+// import Techno from "./Techno";
 // import Skil from "./skil";
 
 const Skills = () => {
@@ -13,7 +13,7 @@ const Skills = () => {
         {/* <Skil/> */}
         <Frontend />
         <Backend />
-        <Techno/>
+        {/* <Techno/> */}
         {/* <Tech /> */}
       </div>
       <div className="skills__container2  grid">
