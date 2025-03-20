@@ -6,7 +6,6 @@ import {
   disney,
   eventplanner360,
   exedoestate,
-  // foodeli,
   gemini,
   modernbank,
   nike,
@@ -15,7 +14,6 @@ import {
   realstate,
   glassOcean,
   piolecImage,
-  // crown
 } from "../../assets/projects";
 
 const projects = [
@@ -140,7 +138,7 @@ const projects = [
     name: "EventPlanner360",
     description:
       "An event planning platform for creating events, managing vendors and guests, tracking RSVPs, and sending invitations.",
-    stacks: ["React.js", "Node.js", "Express", "MongoDB", "Nodemailer"],
+    stacks: ["React.js","React.js", "Node.js", "Express", "MongoDB", "Nodemailer"],
     link: "https://eventplanner-frontend-sdjb.onrender.com/",
     github: "https://github.com/sayyidmarvanvt/CBT-CIP",
     image: eventplanner360,
