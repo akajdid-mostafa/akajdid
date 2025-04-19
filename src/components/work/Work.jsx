@@ -49,16 +49,7 @@ const projects = [
     image: piolecImage, // Replace with the actual image variable or path
     category: "Frontend",
   },
-  {
-    name: "Gemini",
-    description:
-      "A generative AI application utilizing the Gemini API, with efficient state management via Context API.",
-    stacks: ["React", "Gemini API", "Vercel"],
-    link: "https://gemini-alpha-rose.vercel.app/",
-    github: "https://github.com/sayyidmarvanvt/Gemini",
-    image: gemini,
-    category: "React",
-  },
+ 
   {
     name: "Monpatient Sass",
     description:
@@ -83,6 +74,16 @@ const projects = [
     github: "https://github.com/akajdid-mostafa/storycareer",
     image: StoryCareer,
     category: "Fullstack",
+  },
+  {
+    name: "Gemini",
+    description:
+      "A generative AI application utilizing the Gemini API, with efficient state management via Context API.",
+    stacks: ["React", "Gemini API", "Vercel"],
+    link: "https://gemini-alpha-rose.vercel.app/",
+    github: "https://github.com/sayyidmarvanvt/Gemini",
+    image: gemini,
+    category: "React",
   },
 ];
 

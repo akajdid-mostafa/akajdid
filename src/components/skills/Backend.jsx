@@ -1,4 +1,6 @@
 import { FaNetworkWired } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiMongoose } from "react-icons/si";
 
 const Backend = () => {
   const backendSkills = [
@@ -16,7 +18,7 @@ const Backend = () => {
     },
     {
       name: "Mongoose",
-      icon: "bx bx-data skills_icon",
+      icon: SiMongoose,
     },
     {
       name: "Firebase",
@@ -32,7 +34,7 @@ const Backend = () => {
     },
     {
       name: "PostgreSQL",
-      icon: "bx bx-data skills_icon",
+      icon: BiLogoPostgresql,
     }
   ];
 
