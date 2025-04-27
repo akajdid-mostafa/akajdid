@@ -16,7 +16,7 @@ import Mui from "./skills/material-ui.svg";
 import git from "./skills/git.svg";
 import img2 from "./img2.jpg";
 import responsive from "./smartphone-call.png";
-import resume from "./mostafa-akajdid-cv.pdf";
+import resume from "./Mostafa-Akajdid-CV.pdf";
 
 export {
   hand,

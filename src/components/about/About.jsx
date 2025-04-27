@@ -12,27 +12,24 @@ const About = () => {
       <div className="about__container container grid">
         <img src={img2} alt="" className="about__img" />
         <div className="about__data">
-          {/* <p className="about__description">
-            As a Full-Stack Developer with expertise in the MERN stack, I
-            possess an impressive arsenal of skills in HTML, CSS, JavaScript,
-            React, Tailwind, and Node.js. 
-          </p> */}
           <p className="about__description">
-            My interest in becoming an Expert in Full-Stack Developer is quite
-            strong. I am always eager to obtain a challenging position that will
-            expand my knowledge, and learn and build upon my development skills.
-            With my excellent technical skills, I can help you scale your
-            business profit and maximize the organization&apos;s growth, goals,
-            and value.
+            Full Stack certified Java SE 17 developer, specializing in React,
+            Next.js, Node.js and Spring Boot.
             <br></br>
             <br></br>
-            You can get my resume to learn more by clicking on the download
-            button below, I&apos;m excited to connect with you and hear your
-            suggestions.
+            With a wealth of experience in Agile environments, I have
+            participated in the development of dynamic web platforms, optimized
+            SQL databases, and ensured continuous integration on collaborative
+            projects. 
+            <br></br>
+            <br></br>
+            Passionate about innovation, collaboration and continuous
+            improvement, I put my technical and human skills to work on
+            demanding projects.
           </p>
 
           <a
-            download="Sayyid_Marvan_Resume.pdf"
+            download="Mostafa Akajdid CV.pdf"
             href={resume}
             className="button button--flex"
           >

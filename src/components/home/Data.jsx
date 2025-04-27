@@ -30,11 +30,18 @@ const Data = () => {
         in Agadir, Morocco.
       </p> */}
       <p className="home__description">
-      I am a Full-Stack developer based in Agadir, Maroc. <br></br>
-      I am very passionate
-      about improving my coding skills & developing applications & websites. I
-      build WebApps and Websites using MERN Stack. Working for myself to improve
-      my skills. Love to build Full-Stack clones.
+        I&apos;m a passionate Full-Stack Developer based in Casablanca, Morocco, with
+        expertise in crafting scalable and robust web applications. 
+        <br/>
+        <br/>
+        My primary tech stack includes MERN (MongoDB, Express, React, Node.js),
+        complemented by solid experience in Java Spring Boot and Next.js. 
+        <br/>
+        <br/>
+        I am constantly pushing my skills forward through hands-on projects,
+        continuous learning, and a strong commitment to code quality and
+        performance. I thrive on building full-stack solutions that deliver
+        real-world impact.
       </p>
 
       <a href="#contact" className="button button--flex">
