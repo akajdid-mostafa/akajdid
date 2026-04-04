@@ -1,55 +1,58 @@
-import { FaNetworkWired } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { SiMongoose } from "react-icons/si";
+import { SiMysql, SiGithubactions } from "react-icons/si";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 const Backend = () => {
   const backendSkills = [
     {
-      name: "Node.js",
-      icon: "bx bxl-nodejs skills_icon",
+      name: "PostgreSQL",
+      icon: BiLogoPostgresql,
     },
     {
-      name: "Express.js",
-      icon: "bx bx-server skills_icon",
+      name: "MySQL",
+      icon: SiMysql,
     },
     {
-      name: "MongoDB",
-      icon: "bx bxl-mongodb skills_icon",
+      name: "Git",
+      icon: "bx bxl-git skills_icon",
     },
     {
-      name: "Mongoose",
-      icon: SiMongoose,
+      name: "GitHub",
+      icon: "bx bxl-github skills_icon",
     },
     {
-      name: "Firebase",
-      icon: "bx bxl-firebase skills_icon",
+      name: "Docker",
+      icon: "bx bxl-docker skills_icon",
+    },
+    {
+      name: "CI/CD",
+      icon: SiGithubactions,
     },
     {
       name: "JWT",
-      icon: "bx bx-shield skills_icon",
+      icon: "bx bx-shield-quarter skills_icon",
     },
     {
-      name: "REST API",
-      icon: FaNetworkWired, // Using react-icons
+      name: "NextAuth",
+      icon: "bx bx-lock-alt skills_icon",
     },
     {
-      name: "PostgreSQL",
-      icon: BiLogoPostgresql,
-    }
+      name: "Agile / Scrum",
+      icon: FaPeopleGroup,
+    },
   ];
 
-  // Split into two groups of 4
   const firstGroup = backendSkills.slice(0, 4);
   const secondGroup = backendSkills.slice(4);
 
   return (
     <div className="skills__content">
-      <h3 className="skills__title">Backend Developer</h3>
+      <h3 className="skills__title">Data, tools &amp; methods</h3>
       <div className="skills__box">
         <div className="skills__group">
           {firstGroup.map((skill, index) => (
             <div className="skills__data" key={index}>
-              {typeof skill.icon === 'string' ? (
+              {typeof skill.icon === "string" ? (
                 <i className={skill.icon}></i>
               ) : (
                 <skill.icon className="skills_icon" />
@@ -63,7 +66,7 @@ const Backend = () => {
         <div className="skills__group">
           {secondGroup.map((skill, index) => (
             <div className="skills__data" key={index}>
-              {typeof skill.icon === 'string' ? (
+              {typeof skill.icon === "string" ? (
                 <i className={skill.icon}></i>
               ) : (
                 <skill.icon className="skills_icon" />

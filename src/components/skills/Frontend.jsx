@@ -1,23 +1,8 @@
 import { RiNextjsLine } from "react-icons/ri";
+import { SiShadcnui } from "react-icons/si";
 
 const Frontend = () => {
   const frontendSkills = [
-    {
-      name: "HTML",
-      icon: "bx bxl-html5 skills_icon",
-    },
-    {
-      name: "CSS",
-      icon: "bx bxl-css3 skills_icon",
-    },
-    {
-      name: "JavaScript",
-      icon: "bx bxl-javascript skills_icon",
-    },
-    {
-      name: "TypeScript",
-      icon: "bx bxl-typescript skills_icon",
-    },
     {
       name: "React",
       icon: "bx bxl-react skills_icon",
@@ -27,27 +12,30 @@ const Frontend = () => {
       icon: RiNextjsLine,
     },
     {
-      name: "Redux",
-      icon: "bx bxl-redux skills_icon",
+      name: "TypeScript",
+      icon: "bx bxl-typescript skills_icon",
     },
     {
       name: "Tailwind CSS",
       icon: "bx bxl-tailwind-css skills_icon",
-    }
+    },
+    {
+      name: "shadcn/ui",
+      icon: SiShadcnui,
+    },
   ];
 
-  // Split into two groups of 4 for layout
-  const firstGroup = frontendSkills.slice(0, 4);
-  const secondGroup = frontendSkills.slice(4);
+  const firstGroup = frontendSkills.slice(0, 3);
+  const secondGroup = frontendSkills.slice(3);
 
   return (
     <div className="skills__content">
-      <h3 className="skills__title">Frontend Developer</h3>
+      <h3 className="skills__title">Frontend</h3>
       <div className="skills__box">
         <div className="skills__group">
           {firstGroup.map((skill, index) => (
             <div className="skills__data" key={index}>
-              {typeof skill.icon === 'string' ? (
+              {typeof skill.icon === "string" ? (
                 <i className={skill.icon}></i>
               ) : (
                 <skill.icon className="skills_icon" />
@@ -61,7 +49,7 @@ const Frontend = () => {
         <div className="skills__group">
           {secondGroup.map((skill, index) => (
             <div className="skills__data" key={index}>
-              {typeof skill.icon === 'string' ? (
+              {typeof skill.icon === "string" ? (
                 <i className={skill.icon}></i>
               ) : (
                 <skill.icon className="skills_icon" />

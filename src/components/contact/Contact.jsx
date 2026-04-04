@@ -76,7 +76,7 @@ const Contact = () => {
   const sendEmail = async (data) => {
     try {
       const response = await fetch(
-        "https://email-lemon-pi.vercel.app/api/sendEmail",
+        "https://email-fawn-alpha.vercel.app/api/sendEmail",
         {
           method: "POST",
           headers: {

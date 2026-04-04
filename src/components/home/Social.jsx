@@ -11,7 +11,7 @@ const Social = () => {
         <span className="home__social-tooltip">Instagram</span>
       </a>
       <a
-        href="https://www.linkedin.com/in/mostafa-akajdid-774735232/"
+        href="https://www.linkedin.com/in/mostafa-akajdid/"
         target="_blank"
         rel="noopener noreferrer"
         className="home__social-icon"

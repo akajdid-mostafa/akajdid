@@ -13,19 +13,18 @@ const About = () => {
         <img src={img2} alt="" className="about__img" />
         <div className="about__data">
           <p className="about__description">
-            Full Stack certified Java SE 17 developer, specializing in React,
-            Next.js, Node.js and Spring Boot.
+            Oracle Certified Professional, Java SE 17 Developer (2025).
+            Full-stack profile: React, Next.js, TypeScript, Tailwind CSS,
+            shadcn/ui on the front; Spring Boot, Express.js, and PostgreSQL on
+            the back; JWT and NextAuth for auth.
             <br></br>
             <br></br>
-            With a wealth of experience in Agile environments, I have
-            participated in the development of dynamic web platforms, optimized
-            SQL databases, and ensured continuous integration on collaborative
-            projects. 
+            I design and integrate REST APIs, model and query relational
+            databases, and deliver features in production within Agile/Scrum
+            teams—with code reviews and solid engineering practices.
             <br></br>
             <br></br>
-            Passionate about innovation, collaboration and continuous
-            improvement, I put my technical and human skills to work on
-            demanding projects.
+            Languages: French (professional), English (intermediate).
           </p>
 
           <a

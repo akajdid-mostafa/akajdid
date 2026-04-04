@@ -12,11 +12,9 @@ const Data = () => {
       </h1>
       <TypeAnimation
         sequence={[
-          "Web Developer",
-          3000,
-          "React Developer",
-          3000,
-          "FullStack Developer",
+          "Full-Stack Developer | React / Next.js | Java / Spring Boot",
+          4000,
+          "React · Next.js · Spring Boot",
           3000,
         ]}
         cursor={false}
@@ -25,23 +23,14 @@ const Data = () => {
         className="home__subtitle"
         repeat={Infinity}
       />
-      {/* <p className="home__description">
-        A passionate Full-Stack Developer specializing in the MERN stack, based
-        in Agadir, Morocco.
-      </p> */}
       <p className="home__description">
-        I&apos;m a passionate Full-Stack Developer based in Casablanca, Morocco, with
-        expertise in crafting scalable and robust web applications. 
-        <br/>
-        <br/>
-        My primary tech stack includes MERN (MongoDB, Express, React, Node.js),
-        complemented by solid experience in Java Spring Boot and Next.js. 
-        <br/>
-        <br/>
-        I am constantly pushing my skills forward through hands-on projects,
-        continuous learning, and a strong commitment to code quality and
-        performance. I thrive on building full-stack solutions that deliver
-        real-world impact.
+        Full-stack developer focused on React, Next.js, and Java (Spring Boot).
+        I build complete web apps—from fast, SEO-friendly UIs with SSR to secure
+        REST APIs and role-based access (RBAC).
+        <br />
+        <br />
+        I work in Agile teams and care about code quality, reviews, and
+        shipping features to production. Based in Casablanca, Morocco.
       </p>
 
       <a href="#contact" className="button button--flex">
