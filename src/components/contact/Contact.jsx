@@ -199,7 +199,7 @@ const Contact = () => {
             >
               {isLoading ? "Sending..." : "Send"}
               {!isLoading && (
-                <img src={send} alt="send icon" className="button__icon" />
+                <img src={send} alt="Send message" className="button__icon" />
               )}
             </button>
           </form>

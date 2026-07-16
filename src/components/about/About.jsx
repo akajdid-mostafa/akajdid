@@ -10,7 +10,7 @@ const About = () => {
       <span className="section__subtitle">My introduction</span>
 
       <div className="about__container container grid">
-        <img src={img2} alt="" className="about__img" />
+        <img src={img2} alt="Mostafa Akajdid portrait" className="about__img" loading="lazy" decoding="async" />
         <div className="about__data">
           <p className="about__description">
             Oracle Certified Professional, Java SE 17 Developer (2025).
@@ -33,7 +33,7 @@ const About = () => {
             className="button button--flex"
           >
             Download CV
-            <img src={files} alt="" className="button__icon" />
+            <img src={files} alt="Download CV" className="button__icon" />
           </a>
         </div>
       </div>

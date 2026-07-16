@@ -1,14 +1,16 @@
+import { lazy, Suspense } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
-import About from "./components/about/About";
-import Skills from "./components/skills/Skills";
-import Services from "./components/services/Services";
-import Qualification from "./components/qualification/Qualification";
-import Work from "./components/work/Work";
-import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollUp/ScrollUp";
+
+const About = lazy(() => import("./components/about/About"));
+const Skills = lazy(() => import("./components/skills/Skills"));
+const Services = lazy(() => import("./components/services/Services"));
+const Qualification = lazy(() => import("./components/qualification/Qualification"));
+const Work = lazy(() => import("./components/work/Work"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 const App = () => {
   return (
@@ -16,12 +18,14 @@ const App = () => {
       <Header />
       <main className="main">
         <Home />
-        <About />
-        <Skills />
-        <Services />
-        <Qualification />
-        <Work />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <Skills />
+          <Services />
+          <Qualification />
+          <Work />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
       <ScrollUp />

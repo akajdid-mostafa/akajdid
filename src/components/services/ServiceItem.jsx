@@ -2,7 +2,7 @@ const ServiceItem = ({ title, description, icon }) => {
   return (
     <div className="services__content">
       <div className="icon__box">
-        <img src={icon} alt="" className="services__icon" />
+        <img src={icon} alt={`${title} icon`} className="services__icon" loading="lazy" decoding="async" />
         <div className="services__dot">
           <span className="dot"></span>
         </div>

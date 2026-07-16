@@ -24,8 +24,8 @@ const DarkMode = () => {
         onChange={toggleTheme}
       />
       <label className="dark_mode_label" htmlFor="darkmode-toggle">
-        <img src={Sun} alt="" className="sun"/>
-        <img src={Moon} alt="" className="moon"/>
+        <img src={Sun} alt="Light mode" className="sun" />
+        <img src={Moon} alt="Dark mode" className="moon" />
       </label>
     </div>
   );

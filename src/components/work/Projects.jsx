@@ -29,8 +29,10 @@ const Projects = ({ projects }) => {
           >
             <img
               src={project.image}
-              alt={project.name}
+              alt={`${project.name} project screenshot`}
               className="project__img"
+              loading="lazy"
+              decoding="async"
             />
           </a>
 
