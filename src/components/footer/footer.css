@@ -32,6 +32,24 @@ padding: 0;
     display: flex;
     justify-content: center;
     column-gap: 1.125rem;
+    margin-top: var(--mb-2);
+}
+
+.footer__address {
+  text-align: center;
+  font-style: normal;
+  margin-bottom: var(--mb-2);
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.footer__address a {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer__address a:hover {
+  color: var(--title-color-dark);
 }
 
 .footer__social-link{
