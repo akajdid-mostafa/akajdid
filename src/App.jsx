@@ -9,6 +9,7 @@ const ProjectDetail = lazy(() =>
 );
 const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+// gjg
 
 const App = () => {
   return (
