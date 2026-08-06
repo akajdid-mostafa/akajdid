@@ -1,42 +1,29 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import { send } from "../../assets/assets";
-import TextDecrypt from "../Utils/TextDecrypt";
-import { TypeAnimation } from "react-type-animation";
-
 const Data = () => {
   return (
     <div className="home__data">
-      <h1 className="home__title">
-        <TextDecrypt text={"MOSTAFA AKAJDID"} />
-      </h1>
-      <TypeAnimation
-        sequence={[
-          "Full-Stack Developer | React / Next.js | Java / Spring Boot",
-          4000,
-          "React · Next.js · Spring Boot",
-          3000,
-        ]}
-        cursor={false}
-        wrapper="span"
-        speed={5}
-        className="home__subtitle"
-        repeat={Infinity}
-      />
-      <p className="home__description">
-        Full-stack developer focused on React, Next.js, and Java (Spring Boot).
-        I build complete web apps—from fast, SEO-friendly UIs with SSR to secure
-        REST APIs and role-based access (RBAC).
-        <br />
-        <br />
-        I work in Agile teams and care about code quality, reviews, and
-        shipping features to production. Based in Casablanca, Morocco.
+      <h1 className="home__title">Mostafa Akajdid</h1>
+      <span className="home__subtitle">Full-Stack Developer</span>
+      <p className="home__main-statement">
+        I start with the user experience, then build the architecture that
+        makes it possible.
+      </p>
+      <p className="home__supporting">
+        From interface decisions to APIs and data flows, I like understanding
+        how every part of the product works together.
       </p>
 
-      <a href="#contact" className="button button--flex">
-        Say Hello
-        <img src={send} alt="send icon" className="button__icon" />
-      </a>
+      <div className="home__cta">
+        <a href="#contact" className="button button--flex">
+          Get in Touch
+          <i className="uil uil-arrow-right button__icon"></i>
+        </a>
+        <a href="#case-studies" className="home__cta-secondary">
+          Explore My Work
+          <span className="home__cta-arrow" aria-hidden="true">
+            &rarr;
+          </span>
+        </a>
+      </div>
     </div>
   );
 };

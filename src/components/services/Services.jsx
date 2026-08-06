@@ -1,40 +1,63 @@
-
-import ServiceItem from "./ServiceItem";
 import "./service.css";
-import { laptop, responsive, web } from "../../assets/assets";
+import { FiLayers, FiMonitor, FiCode } from "react-icons/fi";
+import ServiceItem from "./ServiceItem";
+
+const SERVICES = [
+  {
+    icon: FiLayers,
+    title: "Product Design",
+    description:
+      "Turning ideas into clear, intuitive interfaces that people naturally understand.",
+  },
+  {
+    icon: FiMonitor,
+    title: "Front-end Development",
+    description:
+      "Polished, responsive interfaces that work seamlessly across every device.",
+  },
+  {
+    icon: FiCode,
+    title: "Full-stack Development",
+    description:
+      "End-to-end products built to be reliable, scalable, and easy to maintain.",
+  },
+];
+
+const HEADING = "Every product deserves thoughtful execution.";
 
 const Services = () => {
-    const servicesData = [
-        {
-          title: "WEB DESIGNING",
-          description: "Crafting visually appealing and user-friendly websites that engage and inspire users.",
-          icon: web,
-        },
-        {
-          title: "WEB DEVELOPMENT",
-          description: "Building robust and scalable web applications tailored to meet your business needs.",
-          icon: laptop,
-        },
-        {
-          title: "RESPONSIVE DESIGN",
-          description: "Ensuring seamless user experiences across all devices with adaptive and responsive designs.",
-          icon: responsive,
-        },
-      ];
-      
   return (
-    <section className="services section " id="services">
-      <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">What i offer</span>
-      <div className="services__container container grid">
-      {servicesData.map((service, index) => (
-          <ServiceItem
-            key={index}
-            title={service.title}
-            description={service.description}
-            icon={service.icon}
-          />
-        ))}
+    <section className="services" id="services">
+      <div className="services__container">
+        <span className="services__label">Services</span>
+
+        <h2 className="services__heading">{HEADING}</h2>
+
+        <p className="services__intro">
+          I help people and teams turn ideas into products — from the first
+          interface sketch to the final deploy. Every project gets the same
+          care: clear thinking, clean code, and real attention to detail.
+        </p>
+
+        <div className="services__grid">
+          {SERVICES.map(({ icon: Icon, title, description }) => (
+            <ServiceItem
+              key={title}
+              icon={Icon}
+              title={title}
+              description={description}
+            />
+          ))}
+        </div>
+
+        <div className="services__actions">
+          <a href="#contact" className="services__cta">
+            Discuss your project
+            <span className="services__cta-arrow" aria-hidden="true">
+              &rarr;
+            </span>
+          </a>
+        </div>
       </div>
     </section>
   );

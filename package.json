@@ -2,9 +2,9 @@
   "name": "portfolio",
   "private": "true",
   "version": "0.0.0",
-  "description": "Personal portfolio of Mostafa Akajdid — full-stack developer (React, Next.js, Java/Spring Boot), Casablanca. Oracle Java SE 17 OCP. Live site: akajdidm.vercel.app",
+  "description": "Personal portfolio of Mostafa Akajdid — full-stack developer (React, Next.js, Java/Spring Boot), Casablanca. Oracle Java SE 17 OCP. Live site: makajdid.vercel.app",
   "author": "Mostafa Akajdid <mostafaakajdid6@gmail.com>",
-  "homepage": "https://akajdidm.vercel.app",
+  "homepage": "https://makajdid.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/akajdid-mostafa/akajdid.git"
@@ -19,11 +19,13 @@
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
     "react-icons": "^5.4.0",
-    "react-type-animation": "^3.2.0",
-    "use-dencrypt-effect": "^2.0.0"
+    "react-router-dom": "^7.18.1",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

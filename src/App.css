@@ -62,7 +62,7 @@
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
-    --big-font-size: 2.75rem;
+    --big-font-size: 2.25rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
@@ -96,7 +96,7 @@ textarea {
 }
 
 body {
- 
+  line-height: 1.6;
   background-color: var(--body-color);
   color: var(--text-color);
 }
@@ -106,6 +106,7 @@ h2,
 h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  line-height: 1.2;
 }
 
 ul {
@@ -119,6 +120,18 @@ a {
 button {
   cursor: pointer;
   border: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -162,12 +175,14 @@ img {
 
 /*=============== BUTTONS ===============*/
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background-color: #000;
   color: #fff;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  line-height: 1;
 }
 
 .button:hover {
@@ -197,6 +212,10 @@ img {
     padding: 1rem 1.75rem;
   } */
 
+  .button {
+    font-size: var(--small-font-size);
+  }
+
   .button__icon {
     width: 22px;
     height: 22px;
@@ -205,8 +224,13 @@ img {
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
   body {
-    margin: 0 0 var(--header-height) 0;
+    margin: 0;
+    padding-top: calc(24px + var(--header-height));
   }
 
   .section {

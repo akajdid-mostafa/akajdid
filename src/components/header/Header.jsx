@@ -1,118 +1,133 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import "./header.css";
 import DarkMode from "../DarkMode/DarkMode";
 
 const navItems = [
-  { id: "home", name: "Welcome", icon: "uil uil-estate" },
-  { id: "about", name: "About", icon: "uil uil-user" },
-  { id: "skills", name: "Skills", icon: "uil uil-file-alt" },
-  { id: "services", name: "Services", icon: "uil uil-briefcase-alt" },
-  { id: "evolution", name: "Evolution", icon: "uil uil-chart-line" },
-  { id: "work", name: "Portfolio", icon: "uil uil-scenery" },
-  { id: "contact", name: "Contact", icon: "uil uil-message" },
+  { id: "about", name: "About" },
+  { id: "experience", name: "Experience" },
+  { id: "case-studies", name: "Projects" },
+  { id: "contact", name: "Contact" },
+];
+
+const SECTION_IDS = [
+  "home",
+  "about",
+  "experience",
+  "skills",
+  "case-studies",
+  "contact",
 ];
 
 const Header = () => {
-  const [menu, setMenu] = useState(false);
-  const [active, setActive] = useState("#home");
-  const scrollTimeout = useRef(null);
-  const isScrolling = useRef(false);
+  const [active, setActive] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
+  const isScrolling = useRef(false);
+  const observerRef = useRef(null);
+
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  /* ─── IntersectionObserver for active section ─── */
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    if (observerRef.current) observerRef.current.disconnect();
+
+    const sections = SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !isScrolling.current) {
+            setActive(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    observerRef.current = observer;
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  /* ─── scroll listener for header--scrolled state ─── */
   useEffect(() => {
     const handleScroll = () => {
-      const header = document.querySelector(".header");
-      if (window.scrollY >= 80) header.classList.add("scroll-header");
-      else header.classList.remove("scroll-header");
-
-      if (isScrolling.current) return;
-
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-
-      scrollTimeout.current = setTimeout(() => {
-        const sections = document.querySelectorAll("section[id]");
-        let currentSection = "";
-        
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          
-          if (window.scrollY >= sectionTop - 300 && 
-              window.scrollY < sectionTop + sectionHeight - 300) {
-            currentSection = `#${section.id}`;
-          }
-        });
-
-        if (currentSection) {
-          setActive(currentSection);
-        }
-      }, 100);
+      setScrolled(window.scrollY > 80);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (id) => {
-    isScrolling.current = true;
-    setActive(`#${id}`);
-    setMenu(false);
-    
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
+  /* ─── nav click — smooth scroll to section + cross-page navigation ─── */
+  const handleNavClick = useCallback(
+    (id) => {
+      if (pathname === "/") {
+        isScrolling.current = true;
+        setActive(id);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(() => { isScrolling.current = false; }, 1000);
+      } else {
+        navigate("/", { state: { scrollTo: id } });
+      }
+    },
+    [pathname, navigate]
+  );
 
-    setTimeout(() => {
-      isScrolling.current = false;
-    }, 1000);
-  };
+  /* ─── brand click — scroll to top on homepage ─── */
+  const handleBrandClick = useCallback(
+    (e) => {
+      if (pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    [pathname]
+  );
 
   return (
-    <header className="header">
-      <nav className="nav container">
-        <div className={menu ? "nav__menu show-menu" : "nav__menu"}>
-          <ul className="nav__list grid">
-            {navItems.map((item) => (
-              <li className="nav__item" key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.id);
-                  }}
-                  className={
-                    active === `#${item.id}`
-                      ? "nav__link active-link"
-                      : "nav__link"
-                  }
-                >
-                  <i className={`${item.icon} nav__icon`}></i>
-                  <span className="nav__tooltip">{item.name}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+    <header className={`header${scrolled ? " header--scrolled" : ""}`}>
+      <nav className="nav" aria-label="Main navigation">
+        <a
+          href="/"
+          className="nav__brand"
+          onClick={handleBrandClick}
+          aria-label="Home"
+        >
+          Mostafa
+        </a>
 
-          <i
-            className="uil uil-times nav__close"
-            onClick={() => setMenu(!menu)}
-          ></i>
-        </div>
+        <ul className="nav__links" role="list">
+          {navItems.map((item) => (
+            <li key={item.id} role="listitem">
+              <a
+                href={`#${item.id}`}
+                className={`nav__link${active === item.id ? " nav__link--active" : ""}${item.id === "contact" ? " nav__link--cta" : ""}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.id);
+                }}
+                aria-current={active === item.id ? "page" : undefined}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-        <div className="nav__toggle" onClick={() => setMenu(!menu)}>
-          <i className="uil uil-apps"></i>
+        <div className="nav__end">
+          <DarkMode />
         </div>
-        <DarkMode/>
       </nav>
     </header>
   );
