@@ -162,7 +162,7 @@ Lint failures (full list):
 - **Fix:** Collapse the effect to a single `setStage("complete")` (or remove the stage logic).
 
 ### O-8 · Stale sitemap metadata; verify social card image
-- **File:** `public/sitemap.xml` (all `lastmod` = 2026-07-16); `public/og-image.png` (3.6 KB @ 1200×630).
+- **File:** `public/sitemap.xml` (all `lastmod` = 2026-07-16); `public/mostafaakajdid-og.png` (3.6 KB @ 1200×630).
 - **Description:** Sitemap dates are not kept current; the OG image is very small for its dimensions.
 - **Fix:** Regenerate `lastmod` values; visually verify the OG card renders correctly after fixing I-1.
 

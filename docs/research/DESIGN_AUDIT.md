@@ -1,4 +1,4 @@
-# Complete Design Audit — makajdid.vercel.app
+# Complete Design Audit — akajdidm.vercel.app
 
 **Auditor:** Senior Staff Product Designer / Creative Director  
 **Date:** 26 July 2026  
@@ -558,7 +558,7 @@ The gap between the editorial sections (About→Contact) and the system-level co
 | **Vercel** | 90/100 | Distinctive brand (magenta/black), excellent typography (Geist), clean layouts. |
 | **Linear** | 92/100 | Masterful use of whitespace, typography, subtle motion, and brand color (blue/indigo). |
 | **Stripe Press** | 93/100 | Editorial design excellence. Typography, layout, and book-like reading experience. |
-| **makajdid.vercel.app** | **58/100** | Strong foundation in editorial sections and project detail. Held back by hero, missing brand identity, and inconsistent design systems. |
+| **akajdidm.vercel.app** | **58/100** | Strong foundation in editorial sections and project detail. Held back by hero, missing brand identity, and inconsistent design systems. |
 
 ### Gap Summary
 

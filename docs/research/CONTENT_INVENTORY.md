@@ -25,7 +25,7 @@ Every string below is quoted exactly as it appears in the source. No rewrites, n
 | GitHub | `https://github.com/akajdid-mostafa` | `Social.jsx:33-35`, `Contact.jsx:95-97`, `Footer.jsx:23` | Yes | Also `index.html:54` (JSON-LD `sameAs`), `package.json:10` (repository `https://github.com/akajdid-mostafa/akajdid.git`) |
 | Instagram | `https://www.instagram.com/mostafaakajdidm/` | `index.html:56` (JSON-LD `sameAs`) | No | Yes |
 | Resume/CV link | `src/assets/mostafa-akajdid-cv.pdf` (build output: `/assets/mostafa-akajdid-cv-BbPyvIQb.pdf`) | `src/assets/assets.js:5`, used in `Social.jsx:52-58` and `Footer.jsx:31-39` | Yes (hero social "Resume", footer "Resume") | — |
-| Website URL | `https://makajdid.vercel.app` | `index.html` (canonicals, JSON-LD `url`), `package.json:8` (`homepage`) | — | Yes (canonical + JSON-LD + sitemap) |
+| Website URL | `https://akajdidm.vercel.app` | `index.html` (canonicals, JSON-LD `url`), `package.json:8` (`homepage`) | — | Yes (canonical + JSON-LD + sitemap) |
 | App/brand name (alt) | `Akajdid` | `public/site.webmanifest:2-3` (`name`, `short_name`) | No | Yes |
 
 **Conflicting versions found elsewhere:** job title (Engineer / Software Engineer / Developer), location (Morocco vs Casablanca), phone format (`+212-7-62-54-40-11` vs `+212 7 62 54 40 11`), brand name (Mostafa vs Akajdid). Details in §12.
@@ -202,7 +202,7 @@ Common structure per project: `id`, `slug`, `title`, `subtitle`, `description`, 
 
 Reachability: all 6 are visible on the homepage (`CaseStudies` grid) and on `/projects` page (`CaseStudies showHeader={false}`); all detail pages reachable at `/projects/{slug}`.
 
-SEO per project (from `ProjectDetail.jsx` Helmet): title `{title} — Mostafa Akajdid`, description `{subtitle}`, canonical `https://makajdid.vercel.app/projects/{slug}`, og:type `article`, og:image = site-level `og-image.png` (not the project image). **No per-project structured data (JSON-LD).**
+SEO per project (from `ProjectDetail.jsx` Helmet): title `{title} — Mostafa Akajdid`, description `{subtitle}`, canonical `https://akajdidm.vercel.app/projects/{slug}`, og:type `article`, og:image = site-level `og-image.png` (not the project image). **No per-project structured data (JSON-LD).**
 
 ---
 
@@ -382,7 +382,7 @@ Source: `src/components/header/Header.jsx`, `header.css`, `src/components/footer
 - JSON-LD structured data — three blocks:
 
 **Person** (`index.html:34-65`):
-- `name`: `Mostafa Akajdid` · `url`: `https://makajdid.vercel.app` · `image`: `https://makajdid.vercel.app/og-image.png`
+- `name`: `Mostafa Akajdid` · `url`: `https://akajdidm.vercel.app` · `image`: `https://akajdidm.vercel.app/mostafaakajdid-og.png`
 - `jobTitle`: `Full-Stack Developer`
 - `description`: `Full-stack developer specializing in React, Next.js, Spring Boot, and PostgreSQL. Oracle Certified Java SE 17 Developer.`
 - `address`: `Casablanca`, `Casablanca-Settat`, `20000`, `MA`
@@ -398,24 +398,24 @@ Source: `src/components/header/Header.jsx`, `header.css`, `src/components/footer
 - `hasOfferCatalog` items: `Full-Stack Web Development` ("End-to-end web applications with React/Next.js frontend and Spring Boot/Express.js backend"), `Frontend Development` ("React, Next.js, TypeScript, Tailwind CSS, responsive and accessible UIs"), `REST API Design` ("Scalable REST APIs with Spring Boot, Express.js, JWT auth, and PostgreSQL")
 
 **WebSite** (`index.html:129-142`):
-- `name`: `Mostafa Akajdid Portfolio` · `url`: `https://makajdid.vercel.app` · `description`: `Portfolio of Mostafa Akajdid, full-stack developer in Casablanca, Morocco.` · `inLanguage`: `en`
+- `name`: `Mostafa Akajdid Portfolio` · `url`: `https://akajdidm.vercel.app` · `description`: `Portfolio of Mostafa Akajdid, full-stack developer in Casablanca, Morocco.` · `inLanguage`: `en`
 
 ### Portfolio page Helmet (`src/pages/Portfolio.jsx`)
 - Title: `Mostafa Akajdid — Full-Stack Developer in Casablanca | React, Next.js, Spring Boot`
 - Description: `Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles.`
-- Canonical: `https://makajdid.vercel.app`
-- OG/Twitter: `Full-Stack Developer in Casablanca` + same description + image `https://makajdid.vercel.app/og-image.png`
+- Canonical: `https://akajdidm.vercel.app`
+- OG/Twitter: `Full-Stack Developer in Casablanca` + same description + image `https://akajdidm.vercel.app/mostafaakajdid-og.png`
 
 ### Projects page Helmet (`src/pages/Projects.jsx`)
 - Title: `Projects — Mostafa Akajdid`
 - Description: `A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects.`
-- Canonical: `https://makajdid.vercel.app/projects`
+- Canonical: `https://akajdidm.vercel.app/projects`
 
 ### Project detail Helmet (`src/components/projectDetail/ProjectDetail.jsx`)
-- Title: `{title} — Mostafa Akajdid` · Description: `{subtitle}` · Canonical: `https://makajdid.vercel.app/projects/{slug}` · og:type `article` · og:image site-level.
+- Title: `{title} — Mostafa Akajdid` · Description: `{subtitle}` · Canonical: `https://akajdidm.vercel.app/projects/{slug}` · og:type `article` · og:image site-level.
 
 ### Privacy page Helmet (`src/pages/Privacy.jsx`)
-- Title: `Privacy Policy — Mostafa Akajdid` · Description: `Privacy policy for Mostafa Akajdid's portfolio site.` · Canonical: `https://makajdid.vercel.app/privacy`
+- Title: `Privacy Policy — Mostafa Akajdid` · Description: `Privacy policy for Mostafa Akajdid's portfolio site.` · Canonical: `https://akajdidm.vercel.app/privacy`
 
 ### 404 Helmet (`src/pages/NotFound.jsx`)
 - Title: `404 — Page Not Found | Mostafa Akajdid` · Description: `The page you are looking for could not be found. Return to the portfolio of Mostafa Akajdid.`
@@ -425,7 +425,7 @@ Source: `src/components/header/Header.jsx`, `header.css`, `src/components/footer
 URLs (8): `/` (priority 1.0), `/projects` (0.9), `/projects/realstate`, `/projects/glassocean`, `/projects/piolec`, `/projects/monpatient`, `/projects/storycareer`, `/projects/gemini` (0.8 each), `/privacy` (0.3). All `lastmod 2026-07-16`, `changefreq monthly`. **No `/terms`.**
 
 ### robots.txt
-`User-agent: *` / `Allow: /` / `Sitemap: https://makajdid.vercel.app/sitemap.xml`
+`User-agent: *` / `Allow: /` / `Sitemap: https://akajdidm.vercel.app/sitemap.xml`
 
 ### llms.txt
 Full content includes: `# Mostafa Akajdid — Full-Stack Developer Portfolio`; Links (Homepage, Projects, `#about`, `#skills`, `#services`, `#evolution`, `#case-studies`, `#contact`); About paragraph (Casablanca, Morocco; Oracle Certified Java SE 17 Developer (OCP)); Skills (Frontend includes `Chakra UI`, `Material-UI`; Backend: `Spring Boot, Express.js, Node.js, Java 17`; `Auth: JWT, NextAuth.js, RBAC`; `Methods: Agile/Scrum, code reviews`); Services (4 items); Experience (4 roles); Education (2 items); Projects (6, with `monpatient` described as `Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS`); Contact (email, phone `+212 7 62 54 40 11`, Casablanca, LinkedIn, GitHub).

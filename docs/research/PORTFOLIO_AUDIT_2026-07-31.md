@@ -1,6 +1,6 @@
 # Portfolio Audit — Mostafa Akajdid
 
-Date: 2026-07-31 · Read-only inspection of `makajdid.vercel.app` codebase (src/, public/, index.html, build output).
+Date: 2026-07-31 · Read-only inspection of `akajdidm.vercel.app` codebase (src/, public/, index.html, build output).
 
 ---
 

@@ -4,7 +4,7 @@
 **Audit Date:** 26 July 2026
 **Auditor:** Senior Frontend Engineer / UX Designer
 **Owner:** Mostafa Akajdid — Full-Stack Developer (React, Next.js, Java/Spring Boot)
-**Production:** https://makajdid.vercel.app | **Legacy:** https://akajdidm.vercel.app
+**Production:** https://akajdidm.vercel.app | **Legacy:** https://akajdidm.vercel.app
 **Inspiration:** https://praxis.framer.website
 
 ---
@@ -435,7 +435,7 @@ Each must use unique screenshots and avoid claiming real users, revenue, or test
 **Objectives:** Full a11y audit, image optimization, loading states, SEO metadata, cross-browser test.
 
 **Files likely to change:**
-- src/index.html — update canonical to makajdid.vercel.app
+- src/index.html — update canonical to akajdidm.vercel.app
 - src/pages/Portfolio.jsx — add Suspense skeletons
 - src/pages/Projects.jsx — add Suspense skeletons
 - src/assets/projects/*.png — convert all to WebP
@@ -473,7 +473,7 @@ Top 10 highest-impact tasks in implementation order:
 
 ### Unconfirmed from codebase
 
-1. **Domain:** The index.html references akajdidm.vercel.app as canonical, but the user mentioned makajdid.vercel.app as the current production site. Which is the correct active domain?
+1. **Domain:** The index.html references akajdidm.vercel.app as canonical, but the user mentioned akajdidm.vercel.app as the current production site. Which is the correct active domain?
 
 2. **Contact form API:** The endpoint email-fawn-alpha.vercel.app is an external deployment. Is this owned by Mostafa? Can it be moved into this project as a Vercel serverless function?
 

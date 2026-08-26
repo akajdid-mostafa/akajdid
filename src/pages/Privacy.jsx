@@ -14,7 +14,7 @@ const Privacy = () => {
           name="description"
           content="Privacy policy for Mostafa Akajdid's portfolio site."
         />
-        <link rel="canonical" href="https://makajdid.vercel.app/privacy" />
+        <link rel="canonical" href="https://akajdidm.vercel.app/privacy" />
         <meta property="og:title" content="Privacy Policy — Mostafa Akajdid" />
         <meta
           property="og:description"
@@ -22,12 +22,12 @@ const Privacy = () => {
         />
         <meta
           property="og:url"
-          content="https://makajdid.vercel.app/privacy"
+          content="https://akajdidm.vercel.app/privacy"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://makajdid.vercel.app/og-image.png"
+          content="https://akajdidm.vercel.app/mostafaakajdid-og.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -40,7 +40,7 @@ const Privacy = () => {
         />
         <meta
           name="twitter:image"
-          content="https://makajdid.vercel.app/og-image.png"
+          content="https://akajdidm.vercel.app/mostafaakajdid-og.png"
         />
       </Helmet>
       <Header />
