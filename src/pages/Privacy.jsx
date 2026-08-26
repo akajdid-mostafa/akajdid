@@ -6,6 +6,10 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./Privacy.css";
 
 const Privacy = () => {
+  const openAnalyticsPreferences = () => {
+    window.dispatchEvent(new Event("open-analytics-preferences"));
+  };
+
   return (
     <>
       <Helmet>
@@ -48,7 +52,7 @@ const Privacy = () => {
         <section className="privacy">
           <div className="privacy__container">
             <h1 className="privacy__title">Privacy Policy</h1>
-            <p className="privacy__subtitle">Last updated: July 2026</p>
+            <p className="privacy__subtitle">Last updated: August 2026</p>
 
             <p className="privacy__text">
               This site is a personal portfolio. It doesn&apos;t sell your
@@ -66,11 +70,19 @@ const Privacy = () => {
 
             <h2 className="privacy__heading">Analytics</h2>
             <p className="privacy__text">
-              This site may use privacy-friendly analytics (such as Vercel
-              Analytics) to understand traffic, like which pages get visited and
-              roughly where from. This doesn&apos;t use cookies and doesn&apos;t
-              identify you personally.
+              This site uses Vercel Analytics and, only with your permission,
+              Google Analytics 4. Google Analytics helps me understand visits
+              and page usage and may store analytics identifiers in your
+              browser. I don&apos;t use it for advertising or to build personal
+              profiles. You can decline it when the consent notice appears.
             </p>
+            <button
+              type="button"
+              className="privacy__preferences"
+              onClick={openAnalyticsPreferences}
+            >
+              Change analytics preference
+            </button>
 
             <h2 className="privacy__heading">
               Hosting &amp; Third-Party Services

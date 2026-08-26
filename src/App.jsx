@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import GoogleAnalytics from "./components/analytics/GoogleAnalytics";
 
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Projects = lazy(() => import("./pages/Projects"));
@@ -14,6 +15,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const App = () => {
   return (
     <BrowserRouter>
+      <GoogleAnalytics />
       <Routes>
         <Route
           path="/"
