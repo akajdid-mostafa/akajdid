@@ -7,6 +7,7 @@ const NotFound = () => {
     <>
       <Helmet>
         <title>404 — Page Not Found | Mostafa Akajdid</title>
+        <meta name="robots" content="noindex, follow" />
         <meta
           name="description"
           content="The page you are looking for could not be found. Return to the portfolio of Mostafa Akajdid."

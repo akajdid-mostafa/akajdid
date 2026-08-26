@@ -1,10 +1,4 @@
 import {
-  realstate,
-  glassOcean,
-  piolecImage,
-  gemini,
-  monpatient,
-  StoryCareer,
   Herohala,
   Problemhala,
   Approachhala,
@@ -37,9 +31,9 @@ const caseStudies = [
     slug: "realstate",
     title: "Real Estate Platform",
     subtitle:
-      "A full-stack real estate platform for browsing properties and managing listings, details, images, availability, and reservations from a secured dashboard.",
+      "I rebuilt this real estate project as two connected apps: a public property website and a dashboard that manages the data behind it.",
     description:
-      "A production-ready real estate platform with property discovery, secured administration, reservations, and a separated frontend/backend architecture.",
+      "A public property website connected to a protected dashboard for listings, images, availability, and reservations.",
     image: herorealestat,
     stack: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary"],
     liveUrl: "https://realstat-eta.vercel.app",
@@ -61,8 +55,8 @@ const caseStudies = [
       {
         title: "The Problem",
         text: [
-          "Property discovery and property management were split across disconnected workflows. Visitors needed a clear way to browse and filter listings, while administrators needed one place to manage property data, images, availability, and reservations.",
-          "The first version also kept the public website, API, database access, authentication, and media logic in the same application. As the project grew, that structure became harder to maintain and deploy safely.",
+          "Visitors needed a simple way to search and compare properties. On the other side, the people managing the website needed one place for listings, images, availability, and reservations.",
+          "My first version kept the public website, API, database access, authentication, and media logic in one application. It worked, but every new feature made the boundaries less clear.",
         ],
         image: problemrealestat,
         imageAlt:
@@ -71,8 +65,8 @@ const caseStudies = [
       {
         title: "The Approach",
         text: [
-          "I separated the product into two focused applications: a frontend-only public website and a secured dashboard that owns the API, authentication, database access, and Cloudinary operations.",
-          "The migration was completed step by step—read routes, listing and detail management, JWT protection, reservations, consumer cutover, and production deployment—without changing the existing database schema or interrupting the live data.",
+          "I split the project into two applications. The public website focuses on property discovery; the protected dashboard owns the API, authentication, database access, and Cloudinary operations.",
+          "I moved it in stages—read routes first, then listing management, JWT protection, reservations, and the final frontend cutover—while keeping the existing database and its data.",
         ],
         image: Approachrealestat,
         imageAlt:
@@ -81,8 +75,8 @@ const caseStudies = [
       {
         title: "The Outcome",
         text: [
-          "Visitors can now search, filter, and explore properties with images, structured details, map data, and sharing links. Administrators can manage listings, property details, availability, media, and reservations from one protected dashboard.",
-          "The final production setup uses Next.js, Prisma, PostgreSQL, Cloudinary, JWT authentication, and Vercel, with the public website and dashboard connected through a dedicated backend API.",
+          "Visitors can search and filter properties, open detailed listings, view images and map data, and share a property. Administrators manage that information and the reservation workflow from one dashboard.",
+          "The part I value most in this project is the second version: I did not just add features; I went back and gave the system clearer boundaries.",
         ],
         image: Outcomerealestat,
         imageAlt:
@@ -106,10 +100,10 @@ const caseStudies = [
     title: "Ocean Glass",
   
     subtitle:
-      "A multilingual business platform that helps Ocean Glass showcase services, manage projects, and convert visitors into qualified leads.",
+      "A client website in English, French, and Arabic, with service pages, project galleries, and a quotation flow built around how the business works.",
   
     description:
-      "Designed and developed a complete website for a professional glass services company, combining multilingual support, project galleries, quotation requests, and a modern responsive experience.",
+      "A multilingual website for a glass company, with RTL support, project galleries, and online quotation requests.",
   
     image: Heroglass,
   
@@ -146,9 +140,9 @@ const caseStudies = [
       {
         title: "The Problem",
         text: [
-          "Ocean Glass needed more than a company website. Their services were difficult to explain, completed projects lacked a structured gallery, and customers had no clear path to request quotations online.",
+          "Ocean Glass had services and completed work to show, but no clear place to organize them. Customers also had to contact the company before giving even the basic details needed for a quotation.",
   
-          "The challenge was to create a professional digital experience that builds trust, supports multiple languages, showcases completed work, and turns visitors into potential customers."
+          "The website needed to work in English, French, and Arabic because the audience was not limited to one language. Arabic also meant treating RTL as part of the layout, not as translated text added at the end."
         ],
   
         image: Problemglass,
@@ -159,9 +153,9 @@ const caseStudies = [
       {
         title: "The Approach",
         text: [
-          "I designed and developed a modern multilingual platform using Next.js with English, French, and Arabic support, including proper RTL layouts for Arabic users.",
+          "I organized the website around the questions a customer asks first: what the company does, what similar work looks like, and how to request a quote.",
   
-          "The website combines detailed service pages, project galleries, quotation requests, responsive design, and smooth interactions to create a complete customer journey from discovery to contact."
+          "I built the three language versions with Next.js and i18next, adjusted the layouts for Arabic, and connected service pages and project galleries to a quotation form."
         ],
   
         image: Approachglass,
@@ -172,9 +166,9 @@ const caseStudies = [
       {
         title: "The Outcome",
         text: [
-          "The final product provides Ocean Glass with a professional online presence that clearly communicates its services, showcases completed work, and simplifies customer inquiries.",
+          "Ocean Glass now has one place to explain its services, publish completed projects, and receive quotation requests with useful context from the customer.",
   
-          "The project demonstrates the ability to build production-ready business applications focused on usability, responsiveness, multilingual accessibility, and real client needs."
+          "This project taught me that multilingual work is not only translation. Navigation, spacing, direction, and the order of information all change the experience."
         ],
   
         image: Outcomeglass,
@@ -202,10 +196,10 @@ const caseStudies = [
   title: "Piolec",
 
   subtitle:
-    "A full-stack corporate website and custom content management system built for an electrical engineering company.",
+    "A public website and custom dashboard that let an electrical engineering company publish its own projects, articles, and field photography.",
 
   description:
-    "Live client platform combining a responsive corporate website with a secure administration dashboard for managing projects, blog content, media, users, and published information.",
+    "A client website with a private content dashboard for projects, articles, media, users, and publishing.",
 
   image: HeroPiolec,
 
@@ -272,9 +266,9 @@ const caseStudies = [
       title: "The Outcome",
 
       text: [
-        "The final platform gives Piolec a professional digital presence that reflects the scale and quality of its industrial work. Visitors can explore services, browse completed installations, view detailed project galleries, and contact the company through a clear and responsive interface.",
+        "Visitors can explore Piolec's services, browse completed installations, open detailed project galleries, and contact the company from any device.",
 
-        "Behind the public experience, the custom dashboard transforms the website into a maintainable business tool. Content can be created, updated, organized, and published without code changes, giving the client long-term control over its portfolio and company communication.",
+        "More importantly, the team does not need me for every content change. They can create, organize, update, and publish their own work from the dashboard.",
       ],
 
       image: OutcomePiolec,
@@ -304,9 +298,9 @@ const caseStudies = [
     slug: "monpatient",
     title: "MonPatient",
     subtitle:
-      "A multi-role healthcare platform connecting patients, doctors, nurses, pharmacies, and administrators through one coordinated digital experience.",
+      "A healthcare project where patients, doctors, nurses, pharmacies, and administrators each get the workflows and information meant for their role.",
     description:
-      "A full-stack healthcare platform for patient care, professional coordination, medical records, prescriptions, notifications, and secure role-based access.",
+      "A role-based healthcare platform covering care requests, records, prescriptions, notifications, chat, and document access.",
     image: Heromonpatient,
     stack: ["React", "Fastify", "Prisma", "PostgreSQL"],
     liveUrl: "https://monpatient-kappa.vercel.app",
@@ -348,8 +342,8 @@ const caseStudies = [
       {
         title: "The Outcome",
         text: [
-          "MonPatient is deployed as a presentation-ready healthcare platform where users can register, complete their profile, access the correct dashboard, and use the implemented care and communication workflows without encountering blank pages or broken actions.",
-          "The final system uses a responsive React interface, a secured Fastify REST API, PostgreSQL data persistence, Cloudinary document storage, email verification, and production deployments on Vercel.",
+          "Users can register, complete their profile, reach the dashboard for their role, and use the care and communication workflows that are currently implemented.",
+          "I kept unfinished modules visible as Coming Soon instead of making them look complete. For a project with this many roles, being clear about what works became part of the product work.",
         ],
         image: Outcomemonpatient,
         imageAlt:
@@ -377,10 +371,10 @@ const caseStudies = [
     slug: "storycareer",
     title: "StoryCareer",
     subtitle:
-      "A storytelling platform where professionals share real career journeys to inspire, guide, and help others navigate their own path.",
+      "A place to read career stories from people, not another collection of generic advice about how a career should look.",
   
     description:
-      "A community-driven platform for discovering, publishing, and saving authentic career stories.",
+      "A reading and publishing platform for discovering, writing, and saving real career stories.",
   
     image: herostory,
   
@@ -435,8 +429,8 @@ const caseStudies = [
       {
         title: "The Outcome",
         text: [
-          "The final product delivers a clean publishing and reading experience with secure authentication, responsive design, SEO-friendly architecture, and a scalable foundation for a growing community of career stories.",
-          "Built with Next.js, Prisma, PostgreSQL, and Clerk, the platform prioritizes simplicity, performance, and maintainability over unnecessary complexity."
+          "Readers can discover stories by industry, save the ones they want to return to, and publish their own experience after signing in.",
+          "I kept the interface quiet because the story should carry the page. The main technical pieces are Next.js, Prisma, PostgreSQL, and Clerk."
         ],
         image: Outcomestory,
         imageAlt: "StoryCareer story publishing interface",
@@ -461,10 +455,10 @@ const caseStudies = [
   title: "Hala Translat",
 
   subtitle:
-    "A production-ready document translation platform that simplifies document submission, automated pricing, order tracking, and secure delivery.",
+    "A translation workflow that starts with a document upload and continues through pricing, tracking, administration, and final file delivery.",
 
   description:
-    "End-to-end translation management platform with client portal, administrative dashboard, automated pricing engine, secure file management, and order tracking.",
+    "A client portal and administrative dashboard for pricing, tracking, managing, and delivering document translation requests.",
 
   image: Herohala,
 
@@ -524,8 +518,8 @@ const caseStudies = [
     {
       title: "The Result",
       text: [
-        "The final platform delivers a complete workflow from document upload to secure delivery. Automatic pricing, request tracking, status management, file replacement, and protected downloads work together in a production-ready application.",
-        "The project demonstrates full-stack architecture, secure backend development, API design, database modeling, file storage integration, authentication, responsive UI, and deployment on Vercel.",
+        "A request can move from document upload to automatic pricing, status updates, file replacement, and protected download without being passed between email threads and spreadsheets.",
+        "This was the project where the workflow mattered more than any single screen. Each step had to leave the right information for the client and for the administrator handling the request.",
       ],
       image: Outcomehala,
       imageAlt: "Hala Translat platform across desktop and mobile devices",

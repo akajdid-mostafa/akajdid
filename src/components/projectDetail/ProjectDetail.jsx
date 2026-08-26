@@ -160,6 +160,7 @@ export default function ProjectDetail() {
       <>
         <Helmet>
           <title>404 — Project Not Found | Mostafa Akajdid</title>
+          <meta name="robots" content="noindex, follow" />
           <meta
             name="description"
             content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."

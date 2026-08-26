@@ -4,9 +4,8 @@
 - [Homepage](https://akajdidm.vercel.app)
 - [Projects](https://akajdidm.vercel.app/projects)
 - [About](https://akajdidm.vercel.app/#about)
+- [Experience](https://akajdidm.vercel.app/#experience)
 - [Skills](https://akajdidm.vercel.app/#skills)
-- [Services](https://akajdidm.vercel.app/#services)
-- [Evolution](https://akajdidm.vercel.app/#evolution)
 - [Case Studies](https://akajdidm.vercel.app/#case-studies)
 - [Contact](https://akajdidm.vercel.app/#contact)
 
@@ -40,11 +39,11 @@ Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He speci
 
 ## Projects
 - [Real Estate Platform](https://akajdidm.vercel.app/projects/realstate) — Next.js, Chakra UI, Prisma, PostgreSQL
-- [Glass Ocean](https://akajdidm.vercel.app/projects/glassocean) — Next.js, Material-UI, GSAP, glass morphism design
+- [Ocean Glass](https://akajdidm.vercel.app/projects/ocean-glass) — Next.js, TypeScript, Material UI, Firebase, i18next, GSAP
 - [Piolec](https://akajdidm.vercel.app/projects/piolec) — Next.js, Tailwind CSS, electrical products platform
 - [Monpatient](https://akajdidm.vercel.app/projects/monpatient) — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
 - [StoryCareer](https://akajdidm.vercel.app/projects/storycareer) — Next.js, Node.js, Tailwind CSS, Clerk, career platform
-- [Gemini](https://akajdidm.vercel.app/projects/gemini) — React, Gemini API, generative AI app
+- [Hala Translat](https://akajdidm.vercel.app/projects/halatranslat) — Next.js, TypeScript, Prisma, PostgreSQL, Cloudinary
 
 ## Contact
 - Email: [mostafaakajdid6@gmail.com](mailto:mostafaakajdid6@gmail.com)

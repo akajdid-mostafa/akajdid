@@ -1,8 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/projects", "dest": "/projects/index.html" },
+    { "src": "/projects/realstate", "dest": "/projects/realstate/index.html" },
+    { "src": "/projects/ocean-glass", "dest": "/projects/ocean-glass/index.html" },
+    { "src": "/projects/piolec", "dest": "/projects/piolec/index.html" },
+    { "src": "/projects/monpatient", "dest": "/projects/monpatient/index.html" },
+    { "src": "/projects/storycareer", "dest": "/projects/storycareer/index.html" },
+    { "src": "/projects/halatranslat", "dest": "/projects/halatranslat/index.html" },
+    { "src": "/privacy", "dest": "/privacy/index.html" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+  ]
+}

@@ -27,13 +27,13 @@ The Hero tells visitors HOW Mostafa thinks. The About explains WHY he works that
 Paragraph 1:
 
 ```
-Most of my professional experience has been on the frontend, but that's never been the limit of my curiosity. The more I worked on real products, the more interested I became in everything happening behind the interface—from architecture and APIs to the decisions that shape the final experience.
+Most of my professional experience started on the frontend. Working that close to the interface made me curious about the decisions behind it—where the data comes from, how the API is shaped, and why the architecture changes what the user sees.
 ```
 
 Paragraph 2:
 
 ```
-I enjoy working with people who ask questions, share ideas, and care about building the right thing. I don't try to know everything. I prefer understanding the problem, learning what the project needs, and contributing where I can make the biggest impact.
+I work best with people who ask questions and share ideas. I don't pretend to know everything. I try to understand the problem first, learn what the project needs, and be useful where I can.
 ```
 
 - Exactly two paragraphs. Both unchanged from V2.1.

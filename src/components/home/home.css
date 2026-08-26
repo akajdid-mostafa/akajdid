@@ -1,5 +1,5 @@
 .home {
-  padding-bottom: calc(2rem + 48px);
+  padding-bottom: 2rem;
 }
 
 .home__content {
@@ -181,7 +181,7 @@
 
 @media screen and (max-width: 992px) {
   .home {
-    padding-bottom: calc(2rem + 24px);
+    padding-bottom: 2rem;
   }
 
   .home__content {
@@ -214,7 +214,7 @@
 
 @media screen and (max-width: 768px) {
   .home {
-    padding-bottom: calc(4rem + 24px);
+    padding-bottom: 3rem;
   }
 
   .home__content {

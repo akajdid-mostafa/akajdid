@@ -6,28 +6,28 @@ const EXPERIENCE = [
     company: "Dynamic Impact",
     label: "TODAY",
     current: true,
-    summary: "Building full-stack products inside a real engineering team.",
+    summary: "Working across frontend and backend as part of an engineering team.",
     technologies: ["React", "Next.js", "Spring Boot", "Express.js", "PostgreSQL", "Docker", "Git"],
   },
   {
     role: "Front-End Developer",
     company: "Digitalia Solutions",
     label: "2025",
-    summary: "Learning that good interfaces depend on decisions users never see.",
+    summary: "This is where I learned that a good interface depends on decisions users never see.",
     technologies: ["React 18", "TypeScript", "Tailwind CSS", "shadcn/ui", "JWT"],
   },
   {
     role: "Full-Stack Web Developer",
     company: "Ocean Connecting",
     label: "2024",
-    summary: "The product that changed how I understand architecture and user experience.",
+    summary: "This role pushed me beyond the interface and into authentication, data, and architecture.",
     technologies: ["React", "Next.js", "NextAuth", "PostgreSQL", "MySQL"],
   },
   {
     role: "Web & Marketing Developer",
     company: "Optisent",
     label: "2023",
-    summary: "My first professional experience seeing how users respond to what we build.",
+    summary: "My first time seeing how people respond to what we put online.",
     technologies: ["HTML", "CSS", "Email Marketing", "Data Analysis"],
   },
 ];
@@ -39,13 +39,12 @@ const Experience = () => {
         <span className="experience__label">Experience</span>
 
         <h2 className="experience__heading" id="experience-heading">
-          Experience is where ideas become habits.
+          Each role changed what I pay attention to.
         </h2>
 
         <p className="experience__intro">
-          From early web and marketing work to frontend and full-stack products,
-          each role helped me understand how software is built, used, and
-          maintained.
+          I started with web and marketing work, moved deeper into frontend,
+          and gradually took on the backend and the decisions around it.
         </p>
 
         <ol className="experience__timeline">

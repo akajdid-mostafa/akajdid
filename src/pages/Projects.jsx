@@ -20,13 +20,13 @@ const Projects = () => {
         <title>Projects — Mostafa Akajdid</title>
         <meta
           name="description"
-          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+          content="Case studies by Mostafa Akajdid covering full-stack products, client websites, dashboards, APIs, authentication, and data."
         />
         <link rel="canonical" href="https://akajdidm.vercel.app/projects" />
         <meta property="og:title" content="Projects — Mostafa Akajdid" />
         <meta
           property="og:description"
-          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+          content="Case studies by Mostafa Akajdid covering full-stack products, client websites, dashboards, APIs, authentication, and data."
         />
         <meta property="og:url" content="https://akajdidm.vercel.app/projects" />
         <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@ const Projects = () => {
         <meta name="twitter:title" content="Projects — Mostafa Akajdid" />
         <meta
           name="twitter:description"
-          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+          content="Case studies by Mostafa Akajdid covering full-stack products, client websites, dashboards, APIs, authentication, and data."
         />
         <meta name="twitter:image" content="https://akajdidm.vercel.app/mostafaakajdid-og.png" />
       </Helmet>

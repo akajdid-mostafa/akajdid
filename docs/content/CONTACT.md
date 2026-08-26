@@ -478,7 +478,7 @@ Approved content and design direction for the Contact section, implemented in `s
 ### Documented changes
 
 - **Eyebrow added** — `Contact` label added above the section heading, styled identically to the About, Experience, and Skills labels (same typography, spacing, and centered alignment). Implemented as `.contact__eyebrow` to avoid the existing `contact__label` used by the form's visually hidden field labels.
-- **Final heading** — `Tell me what you're building.` (replaces `Let's build something exceptional.`). Current typography and spacing kept.
+- **Final heading** — `A few lines are enough.` Current typography and spacing kept.
 - **Final supporting copy** — `Whether you're hiring for a full-time role or building a product, a few lines of context are enough to start the conversation.` (replaces the banned-family paragraph).
 - **Visible email fallback** — `Prefer email?` label with `mostafaakajdid6@gmail.com` below the form as quiet, centered, clickable text (no icon, no button, no card, no decoration). Wraps safely on narrow screens.
 - **24-hour claim removed** — `Usually replies within 24 hours.` removed completely (unverified). The now-unused `.contact__microcopy` rule was removed.
@@ -512,7 +512,7 @@ Contact and Footer consolidation, implemented in `src/components/contact/` (`Con
 
 - **Contact and Footer consolidated on homepage** — the standalone Footer is no longer rendered after Contact on the homepage (`Portfolio.jsx`). The page ends with a single final composition.
 - **Profile block retained** — portrait, `Mostafa Akajdid`, `Available for freelance & full-time opportunities.`, LinkedIn/GitHub/Email social row, and `Available now` are kept unchanged and remain the only prominent identity block.
-- **Contact card retained** — `Contact` eyebrow, `Tell me what you're building.`, the approved supporting paragraph, Name/Email/Message fields, submit button, and the visible email fallback are unchanged. Form logic and API behavior are untouched.
+- **Contact card retained** — `Contact` eyebrow, `A few lines are enough.`, the approved supporting paragraph, Name/Email/Message fields, submit button, and the visible email fallback are unchanged. Form logic and API behavior are untouched.
 - **Button changed to `Send message`** — replaces `Let's work together`; loading state remains `Sending...`. Button styling unchanged.
 - **Footer links moved into Contact card** — quiet, text-first global links row (LinkedIn, GitHub, Email, Resume, Privacy) using the verified URLs and actions from `Footer.jsx`, with a thin divider (`1px solid rgba(0,0,0,0.07)`), `margin-top: 3rem`, `padding-top: 1.5rem`, centered, no background/shadow/nested card.
 - **Identity/legal moved into Contact card** — `Mostafa Akajdid` (small, weight 600), `Full-Stack Developer` (muted), and `© 2026 Mostafa Akajdid. All rights reserved.` (tiny, muted). Year is hardcoded `2026`, matching the existing standalone Footer behavior. No second portrait, no repeated availability, no phone or location.

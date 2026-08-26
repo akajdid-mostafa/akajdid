@@ -12,13 +12,13 @@ const Privacy = () => {
         <title>Privacy Policy — Mostafa Akajdid</title>
         <meta
           name="description"
-          content="Privacy policy for Mostafa Akajdid's portfolio site."
+          content="How Mostafa Akajdid's portfolio handles contact form submissions, analytics, hosting, and personal information."
         />
         <link rel="canonical" href="https://akajdidm.vercel.app/privacy" />
         <meta property="og:title" content="Privacy Policy — Mostafa Akajdid" />
         <meta
           property="og:description"
-          content="Privacy policy for Mostafa Akajdid's portfolio site."
+          content="How Mostafa Akajdid's portfolio handles contact form submissions, analytics, hosting, and personal information."
         />
         <meta
           property="og:url"
@@ -36,7 +36,7 @@ const Privacy = () => {
         />
         <meta
           name="twitter:description"
-          content="Privacy policy for Mostafa Akajdid's portfolio site."
+          content="How Mostafa Akajdid's portfolio handles contact form submissions, analytics, hosting, and personal information."
         />
         <meta
           name="twitter:image"

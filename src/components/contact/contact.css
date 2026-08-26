@@ -133,6 +133,14 @@
 
 /* ─── FORM ─── */
 
+.contact__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact__field {
   position: relative;
   margin-bottom: 1.5rem;

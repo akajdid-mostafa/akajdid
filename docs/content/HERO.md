@@ -94,8 +94,8 @@ Final approved decisions. These are the only pieces of content the Hero displays
 
 - **Name** — `Mostafa Akajdid`
 - **Role** — `Full-Stack Developer`
-- **Core message** — `I start with the user experience, then build the architecture that makes it possible.`
-- **Supporting sentence** — `From interface decisions to APIs and data flows, I like understanding how every part of the product works together.`
+- **Core message** — `I like starting with what the user needs, then working through the interface, the API, and the data behind it.`
+- **Supporting sentence** — `Most of my experience began on the frontend. Curiosity is what pulled me into the rest of the product.`
 - **Primary CTA** — `Get in Touch` — scrolls to the Contact section.
 - **Secondary CTA** — `Explore My Work` — scrolls to the Projects section.
 - **Portrait** — the current portrait remains unchanged for now. No redesign, no replacement image.

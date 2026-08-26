@@ -1,7 +1,7 @@
 /*=============== ABOUT — POLISH ===============*/
 
 .about {
-  padding: 7rem 1.5rem 5.5rem;
+  padding: 3rem 1.5rem 5.5rem;
 }
 
 .about__container {
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 992px) {
   .about {
-    padding: 5.5rem 1.5rem 4.5rem;
+    padding: 4.5rem 1.5rem 4.5rem;
   }
 
   .about__body {
@@ -115,13 +115,13 @@
 
 @media screen and (max-width: 768px) {
   .about {
-    padding: 4.5rem 1.5rem 4rem;
+    padding: 3.5rem 1.5rem 4rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .about {
-    padding: 4rem 1.25rem 3.5rem;
+    padding: 3rem 1.25rem 3.5rem;
   }
 
   .about__portrait {

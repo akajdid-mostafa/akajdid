@@ -24,19 +24,17 @@ const About = () => {
             </h2>
 
             <p className="about__text">
-              Most of my professional experience has been on the frontend, but
-              that&apos;s never been the limit of my curiosity. The more I
-              worked on real products, the more interested I became in
-              everything happening behind the interface&mdash;from architecture
-              and APIs to the decisions that shape the final experience.
+              Most of my professional experience started on the frontend.
+              Working that close to the interface made me curious about the
+              decisions behind it&mdash;where the data comes from, how the API is
+              shaped, and why the architecture changes what the user sees.
             </p>
 
             <p className="about__text">
-              I enjoy working with people who ask questions, share ideas, and
-              care about building the right thing. I don&apos;t try to know
-              everything. I prefer understanding the problem, learning what the
-              project needs, and contributing where I can make the biggest
-              impact.
+              I work best with people who ask questions and share ideas. I
+              don&apos;t pretend to know everything. I try to understand the
+              problem first, learn what the project needs, and be useful where
+              I can.
             </p>
 
             <p className="about__proof">

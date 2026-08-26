@@ -21,7 +21,7 @@ const SKILL_GROUPS = [
   {
     title: "Core product stack",
     description:
-      "The technologies I use to build complete web products, from interfaces and APIs to authentication and data.",
+      "The tools I have used across interfaces, APIs, authentication, and data.",
     skills: [
       { name: "React", icon: SiReact },
       { name: "Spring Boot", icon: SiSpringboot },
@@ -39,7 +39,7 @@ const SKILL_GROUPS = [
   {
     title: "Delivery and collaboration",
     description:
-      "The tools and practices that help the work stay maintainable, reviewable, and ready to ship.",
+      "The tools and practices I use to share, review, test, and ship the work.",
     skills: [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
@@ -50,7 +50,7 @@ const SKILL_GROUPS = [
   },
 ];
 
-const HEADING = "Tools evolve. The way you solve problems matters longer.";
+const HEADING = "These are the tools I have actually worked with.";
 
 const Skills = () => {
   return (
@@ -62,9 +62,9 @@ const Skills = () => {
           <h2 className="skills__heading">{HEADING}</h2>
 
           <p className="skills__intro">
-            I work across interfaces, backend systems, data, and delivery. The
-            tools change from one product to another, but these are the
-            technologies and practices that shape most of my work.
+            I don&apos;t use every tool on every project. This is the stack I
+            have reached for most often across frontend, backend, data, and
+            delivery.
           </p>
         </div>
 

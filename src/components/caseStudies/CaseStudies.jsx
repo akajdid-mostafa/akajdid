@@ -9,9 +9,10 @@ const CaseStudies = ({ showHeader = true }) => {
       {showHeader && (
         <div className="case-studies__container">
           <span className="case-studies__label">Projects</span>
-          <h2 className="case-studies__heading">Work that reflects how I think, not just what I build.</h2>
+          <h2 className="case-studies__heading">I don&apos;t want to show only the finished screen.</h2>
           <p className="case-studies__intro">
-            Every project is an opportunity to solve a real problem through thoughtful engineering, clear decisions, and attention to the details that shape the final experience.
+            These case studies include the problem, the decisions I made, and
+            the parts that changed how I would approach the next project.
           </p>
         </div>
       )}

@@ -30,18 +30,18 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Mostafa Akajdid — Full-Stack Developer in Casablanca | React, Next.js, Spring Boot</title>
+        <title>Mostafa Akajdid — Full-Stack Developer in Casablanca</title>
         <meta
           name="description"
           content="Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles."
         />
-        <link rel="canonical" href="https://akajdidm.vercel.app" />
+        <link rel="canonical" href="https://akajdidm.vercel.app/" />
         <meta property="og:title" content="Mostafa Akajdid — Full-Stack Developer in Casablanca" />
         <meta
           property="og:description"
           content="Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles."
         />
-        <meta property="og:url" content="https://akajdidm.vercel.app" />
+        <meta property="og:url" content="https://akajdidm.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://akajdidm.vercel.app/mostafaakajdid-og.png" />
         <meta name="twitter:card" content="summary_large_image" />

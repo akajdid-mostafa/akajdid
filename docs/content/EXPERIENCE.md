@@ -202,7 +202,7 @@ The Hero tells visitors HOW Mostafa thinks. The About explains WHY he works that
 
 ### Final section heading
 
-`Experience is where ideas become habits.`
+`Each role changed what I pay attention to.`
 
 - One heading only.
 - Typography, font size, spacing, and alignment unchanged from V2.

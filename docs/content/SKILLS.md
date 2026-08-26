@@ -24,7 +24,7 @@ The section keeps the current editorial shell: 720px container, two stacked grou
 Heading (unchanged):
 
 ```
-Tools evolve. The way you solve problems matters longer.
+These are the tools I have actually worked with.
 ```
 
 Introduction (replaced):
@@ -210,7 +210,7 @@ Source: `src/components/skills/Skills.jsx`, `src/components/skills/SkillItem.jsx
 Visible copy, verbatim:
 
 - Label: `Technical Expertise`
-- Heading: `Tools evolve. The way you solve problems matters longer.`
+- Heading: `These are the tools I have actually worked with.`
 - Intro: `Every product asks different technical questions. I don't start with a favorite framework — I start with the problem. Once the constraints are clear, choosing the right architecture and technology becomes the easy part.`
 - Group 1 title: `Technologies I use every day` — description: `The tools I reach for when building complete products, from interfaces to backend systems.` — 10 items.
 - Group 2 title: `How I work` — description: `The practices that help software stay reliable, maintainable, and easy to evolve.` — 6 items.

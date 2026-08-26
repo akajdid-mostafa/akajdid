@@ -355,7 +355,7 @@
   .experience__entry:nth-child(even) .experience__card {
     grid-column: auto;
     justify-self: auto;
-    width: 100%;
+    width: auto;
     max-width: none;
     margin: 0 0 0 2.75rem;
   }
